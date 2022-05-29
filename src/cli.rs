@@ -6,11 +6,9 @@ pub struct Cli {
     #[clap(subcommand)]
     pub subcmds: Option<SubCommands>,
     /// Specify a certain month (range: 1 - 12)
-    #[clap(parse(try_from_str))]
-    pub month: usize,
-    /// Speicy a certain year (range: 1645 - 7000)
-    #[clap(parse(try_from_str))]
-    pub year: usize,
+    pub month: Option<String>,
+    /// Speicy a certain year (range: 1645 - 7000
+    pub year: Option<String>,
 }
 
 #[derive(Parser)]
